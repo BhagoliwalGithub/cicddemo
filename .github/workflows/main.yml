@@ -1,0 +1,21 @@
+
+name: My CI CD Pipeline in GitHub Actions
+
+on:
+  push:
+    branches:
+      - main
+  branch_protection_rule:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: My first step
+        run: |
+          echo "This is DevOps Molvi"
+          uname -a
